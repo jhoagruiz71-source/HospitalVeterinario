@@ -5,10 +5,20 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Hospital hospital = new Hospital();
 
-        while (scanner.hasNextLine()) {
+        // Bucle interactivo claro para la consola
+        while (true) {
+            // Imprimimos un indicador visual opcional o leemos directamente
+            if (!scanner.hasNextLine()) {
+                break;
+            }
+
             String linea = scanner.nextLine().trim();
-            if (linea.equalsIgnoreCase("salir")) break;
-            if (linea.isEmpty()) continue;
+            if (linea.equalsIgnoreCase("salir")) {
+                break;
+            }
+            if (linea.isEmpty()) {
+                continue;
+            }
 
             String[] partes = linea.split(" ");
             String comando = partes[0].toLowerCase();

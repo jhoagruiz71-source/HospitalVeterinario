@@ -102,7 +102,7 @@ public class Hospital {
         Jaula jaulaSeleccionada = null;
         for (Jaula j : jaulas) {
             if (j.estaLibre() && j.getZona() == zonaPermitida) {
-                if (cumpleTamanho(j.getTamanho(), tamanhoNecesario)) {
+                if (cumpleTamanho(j.getTamano(), tamanhoNecesario)) {
                     jaulaSeleccionada = j;
                     break;
                 }
